@@ -1,16 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FooterComponent } from './footer/footer.component';
-
+import { ButtonComponent } from './button/button.component';
 @NgModule({
     declarations: [
-      FooterComponent
+      FooterComponent,
+      ButtonComponent
     ],
     imports: [
       BrowserModule
     ],
     exports: [
-        FooterComponent
+        FooterComponent,
+        ButtonComponent
     ],
     providers: []
   })
