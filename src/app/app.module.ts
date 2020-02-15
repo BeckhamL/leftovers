@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MainModule } from './main/main.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialCommonModule } from './main/components/material-common/material-common.module';
+import { ReactiveFormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent
@@ -15,7 +16,8 @@ import { MaterialCommonModule } from './main/components/material-common/material
     AppRoutingModule,
     MainModule,
     BrowserAnimationsModule,
-    MaterialCommonModule
+    MaterialCommonModule,
+    ReactiveFormsModule
   ],
   exports: [
     MaterialCommonModule

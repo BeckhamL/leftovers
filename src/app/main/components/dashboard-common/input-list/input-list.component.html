@@ -1,7 +1,11 @@
 <mat-list role="list">
-  <mat-list-item role="listitem">
-    <mat-form-field >
-      <input matInput placeholder="Enter some veggies">
-    </mat-form-field>
+  <mat-list-item role="listitem" *ngFor="let vegetable of vegetableValues">
+    <p>{{vegetable}}</p>
   </mat-list-item>
 </mat-list>
+
+<mat-form-field>
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+      <input matInput placeholder="Enter some veggies" formControlName="vegetable">
+    </form>
+  </mat-form-field>

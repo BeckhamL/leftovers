@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, FormControlName } from '@angular/forms';
 
 @Component({
   selector: 'dashboard-common-input-list',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputListComponent implements OnInit {
 
+  formGroup = new FormGroup({
+    vegetable : new FormControl('')
+  });
+  vegetableValues: string[];
   constructor() { }
 
   ngOnInit() {
+    this.vegetableValues = [];
+}
+
+  onSubmit() {
+    this.vegetableValues.push(this.formGroup.value.vegetable);
+    this.formGroup.reset();
   }
 
 }
