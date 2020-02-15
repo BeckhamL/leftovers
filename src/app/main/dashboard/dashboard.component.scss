@@ -4,14 +4,26 @@
   text-align: center;
 }
 
+.tab_wrapper {
+  margin: 50px;
+  padding: 50px;
+  background-color: white;
+  min-height: 250px;
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px #00000018;
+}
+
 .title_font {
   font-size: 48px;
   font-weight: 600;
   letter-spacing: 0.36px;
+  color: white;
 }
 
 .content_font {
   font-size: 30px;
   letter-spacing: 0.36px;
   font-weight: 600;
+  color: white;
 }
