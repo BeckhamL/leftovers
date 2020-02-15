@@ -3,18 +3,21 @@ import { NgModule } from '@angular/core';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatButtonModule} from '@angular/material/button';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 @NgModule({
 
   imports: [
     BrowserModule,
     MatTabsModule,
     MatExpansionModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCheckboxModule
   ],
   exports: [
     MatTabsModule,
     MatExpansionModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCheckboxModule
   ],
   providers: []
 })
