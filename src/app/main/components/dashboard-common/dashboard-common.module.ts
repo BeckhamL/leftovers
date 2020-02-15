@@ -6,6 +6,7 @@ import { TabGroupComponent } from "./tab-group/tab-group.component";
 import { MatTabsModule } from "@angular/material/tabs";
 import { InputListComponent } from "./input-list/input-list.component";
 import {MatListModule} from '@angular/material/list';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [TabGroupComponent, InputListComponent],
   imports: [
@@ -13,7 +14,8 @@ import {MatListModule} from '@angular/material/list';
     MatButtonModule,
     MaterialCommonModule,
     MatTabsModule,
-    MatListModule
+    MatListModule,
+    MatInputModule
   ],
   exports: [MaterialCommonModule, TabGroupComponent, InputListComponent],
   providers: []
