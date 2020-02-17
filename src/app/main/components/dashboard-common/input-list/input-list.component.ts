@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { IngredientsService } from '../../../services/ingredients.service';
 
 @Component({
   selector: 'dashboard-common-input-list',
@@ -12,10 +13,13 @@ export class InputListComponent implements OnInit {
     vegetable : new FormControl('')
   });
   vegetableValues: string[];
-  constructor() { }
+  constructor(
+    private ingredientService: IngredientsService
+  ) { }
 
   ngOnInit() {
     this.vegetableValues = [];
+    this.ingredientService.getAllIngredients(this.vegetableValues);
 }
 
   onSubmit() {

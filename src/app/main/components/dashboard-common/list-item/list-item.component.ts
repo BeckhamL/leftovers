@@ -27,7 +27,7 @@ export class ListItemComponent implements OnInit {
     const dialogRef = this.dialog.open(ConfirmationModalComponent, {
       width: '500px',
       data: {dialogTitle: 'Are you sure you want to delete ' + itemSelected + ' from the list?'}
-    })
+    });
     //this.deleteItem.emit(itemSelected);
   }
 
