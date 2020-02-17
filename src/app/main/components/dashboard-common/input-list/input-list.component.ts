@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormControlName } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'dashboard-common-input-list',
@@ -21,6 +21,10 @@ export class InputListComponent implements OnInit {
   onSubmit() {
     this.vegetableValues.push(this.formGroup.value.vegetable);
     this.formGroup.reset();
+  }
+
+  getDeletedItem(event) {
+    this.vegetableValues = this.vegetableValues.filter(x => x !== event);
   }
 
 }

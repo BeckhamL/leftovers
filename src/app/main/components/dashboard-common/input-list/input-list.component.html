@@ -1,6 +1,6 @@
 <mat-list role="list">
   <mat-list-item role="listitem" *ngFor="let vegetable of vegetableValues">
-    <dashboard-common-list-item [itemName]="vegetable"></dashboard-common-list-item>
+    <dashboard-common-list-item [itemName]="vegetable" (deleteItem)="getDeletedItem($event)"></dashboard-common-list-item>
   </mat-list-item>
 </mat-list>
 

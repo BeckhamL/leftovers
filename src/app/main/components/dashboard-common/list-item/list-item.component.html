@@ -1,3 +1,13 @@
-<p>
-  {{itemName}}
-</p>
+<div class="card_wrapper">
+  <mat-card>
+    <div class="_flex _flex_align_item_center _space_between">
+      <div>
+        {{itemName}}
+      </div>
+      <div>
+        <mat-icon (click)="deleteSelectedItem(itemName)">close</mat-icon>
+      </div>
+    </div>
+
+  </mat-card>
+</div>

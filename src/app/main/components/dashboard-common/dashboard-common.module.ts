@@ -9,6 +9,8 @@ import { MatListModule } from "@angular/material/list";
 import { MatInputModule } from "@angular/material/input";
 import { ReactiveFormsModule } from "@angular/forms";
 import { ListItemComponent } from './list-item/list-item.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [TabGroupComponent, InputListComponent, ListItemComponent],
   imports: [
@@ -18,7 +20,9 @@ import { ListItemComponent } from './list-item/list-item.component';
     MatTabsModule,
     MatListModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule,
+    MatIconModule
   ],
   exports: [MaterialCommonModule, TabGroupComponent, InputListComponent],
   providers: []
