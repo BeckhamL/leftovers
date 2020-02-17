@@ -1,9 +1,6 @@
 <button mat-raised-button class="{{config?.style}}">
-    <div class="_flex _flex_align_item_center">
+  <div class="_flex _flex_align_item_center">
     <span>{{config?.title}}</span>
-    <span *ngIf="config?.icon">
-        <mat-icon>{{config?.icon}}</mat-icon>
-    </span>
-    </div>
-
+    <mat-icon *ngIf="config?.icon">{{config?.icon}}</mat-icon>
+  </div>
 </button>

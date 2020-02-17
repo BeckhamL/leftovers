@@ -4,13 +4,24 @@ import { FooterComponent } from "./footer/footer.component";
 import { ButtonComponent } from "./button/button.component";
 import { MaterialCommonModule } from "../material-common/material-common.module";
 import { MatButtonModule } from "@angular/material/button";
-import {MatIconModule} from '@angular/material/icon';
-import { EditModalComponent } from './edit-modal/edit-modal.component';
+import { MatIconModule } from "@angular/material/icon";
+import { EditModalComponent } from "./edit-modal/edit-modal.component";
+import { ConfirmationModalComponent } from "./confirmation-modal/confirmation-modal.component";
 @NgModule({
-  declarations: [FooterComponent, ButtonComponent, EditModalComponent],
-  imports: [BrowserModule, MatButtonModule, MaterialCommonModule, MatIconModule],
+  declarations: [
+    FooterComponent,
+    ButtonComponent,
+    EditModalComponent,
+    ConfirmationModalComponent
+  ],
+  imports: [
+    BrowserModule,
+    MatButtonModule,
+    MaterialCommonModule,
+    MatIconModule
+  ],
   exports: [FooterComponent, ButtonComponent, MaterialCommonModule],
   providers: [],
-  entryComponents: [EditModalComponent]
+  entryComponents: [EditModalComponent, ConfirmationModalComponent]
 })
 export class SiteCommonModule {}
