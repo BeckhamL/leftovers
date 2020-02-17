@@ -1,6 +1,6 @@
 <mat-list role="list">
   <mat-list-item role="listitem" *ngFor="let vegetable of vegetableValues">
-    <p>{{vegetable}}</p>
+    <dashboard-common-list-item [itemName]="vegetable"></dashboard-common-list-item>
   </mat-list-item>
 </mat-list>
 
