@@ -19,7 +19,7 @@ export class InputListComponent implements OnInit {
 
   ngOnInit() {
     this.vegetableValues = [];
-    this.ingredientService.getAllIngredients(this.vegetableValues);
+    this.ingredientService.setIngredients(this.vegetableValues);
 }
 
   onSubmit() {

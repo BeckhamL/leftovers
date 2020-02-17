@@ -7,12 +7,18 @@ import { Subject, Observable } from 'rxjs';
 export class IngredientsService {
 
   ingredients$: Observable<string[]>;
+  ingredientList: string[];
   private myMethodSubject = new Subject<any>();
   constructor() {
     this.ingredients$ = this.myMethodSubject.asObservable();
   }
 
-  getAllIngredients(ingredients: string[]): void {
-      this.myMethodSubject.next(ingredients);
+  setIngredients(ingredients: string[]): void {
+    this.ingredientList = ingredients;
+    this.myMethodSubject.next(ingredients);
+  }
+
+  getAllIngredients(): string[] {
+      return this.ingredientList;
   }
 }

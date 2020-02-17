@@ -13,10 +13,7 @@ export class PreferencesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.ingredientService.ingredients$.subscribe(data => {
-      console.log(data);
-      this.ingredientList = data;
-    })
+    this.ingredientList = this.ingredientService.getAllIngredients();
   }
 
 }
