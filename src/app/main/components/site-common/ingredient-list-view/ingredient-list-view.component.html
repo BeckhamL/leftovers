@@ -1,8 +1,9 @@
 <div class="view_wrapper">
-  <div>{{title}}</div>
+  <div class="title_text">{{title}}</div>
   <div >
-     <ul *ngFor="let ingredient of ingredientList">
-       <li>{{ingredient}}</li>
-     </ul> 
+     <mat-list *ngFor="let ingredient of ingredientList">
+      <mat-list-item>{{ingredient}}</mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
   </div>
 </div>

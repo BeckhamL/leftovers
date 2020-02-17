@@ -9,6 +9,8 @@ import { EditModalComponent } from "./edit-modal/edit-modal.component";
 import { ConfirmationModalComponent } from "./confirmation-modal/confirmation-modal.component";
 import { RouterModule } from '@angular/router';
 import { IngredientListViewComponent } from './ingredient-list-view/ingredient-list-view.component';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
 @NgModule({
   declarations: [
     FooterComponent,
@@ -22,7 +24,9 @@ import { IngredientListViewComponent } from './ingredient-list-view/ingredient-l
     MatButtonModule,
     MaterialCommonModule,
     MatIconModule,
-    RouterModule
+    RouterModule,
+    MatDividerModule,
+    MatListModule
   ],
   exports: [FooterComponent, ButtonComponent, MaterialCommonModule, IngredientListViewComponent],
   providers: [],
