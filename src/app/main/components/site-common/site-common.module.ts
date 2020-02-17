@@ -7,6 +7,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { EditModalComponent } from "./edit-modal/edit-modal.component";
 import { ConfirmationModalComponent } from "./confirmation-modal/confirmation-modal.component";
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     FooterComponent,
@@ -18,7 +19,8 @@ import { ConfirmationModalComponent } from "./confirmation-modal/confirmation-mo
     BrowserModule,
     MatButtonModule,
     MaterialCommonModule,
-    MatIconModule
+    MatIconModule,
+    RouterModule
   ],
   exports: [FooterComponent, ButtonComponent, MaterialCommonModule],
   providers: [],

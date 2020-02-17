@@ -1,6 +1,7 @@
 <div class="_flex _justify_center footer_wrapper">
   <div class="_flex_col _justify_center">
-      <site-common-button *ngIf="ingredientList?.length > 0; else disabledButton" [config]="{title: 'NEXT', style: 'yellow', icon: 'keyboard_arrow_right'}"></site-common-button>
+      <site-common-button *ngIf="ingredientList?.length > 0; else disabledButton" [config]="{title: 'NEXT', style: 'yellow', icon: 'keyboard_arrow_right'}"
+         (click)="onClickPreferences()"></site-common-button>
       <ng-template #disabledButton>
           <site-common-button [config]="{title: 'NEXT', style: 'disabled', icon: 'keyboard_arrow_right'}"></site-common-button>
       </ng-template>
