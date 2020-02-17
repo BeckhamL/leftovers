@@ -5,10 +5,12 @@ import { ButtonComponent } from "./button/button.component";
 import { MaterialCommonModule } from "../material-common/material-common.module";
 import { MatButtonModule } from "@angular/material/button";
 import {MatIconModule} from '@angular/material/icon';
+import { EditModalComponent } from './edit-modal/edit-modal.component';
 @NgModule({
-  declarations: [FooterComponent, ButtonComponent],
+  declarations: [FooterComponent, ButtonComponent, EditModalComponent],
   imports: [BrowserModule, MatButtonModule, MaterialCommonModule, MatIconModule],
   exports: [FooterComponent, ButtonComponent, MaterialCommonModule],
-  providers: []
+  providers: [],
+  entryComponents: [EditModalComponent]
 })
 export class SiteCommonModule {}

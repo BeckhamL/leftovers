@@ -4,9 +4,12 @@
       <div>
         {{itemName}}
       </div>
+
       <div>
-        <mat-icon (click)="deleteSelectedItem(itemName)">close</mat-icon>
+        <mat-icon (click)="editSelectedItem(itemName)">edit</mat-icon>
+        <mat-icon (click)="deleteSelectedItem(itemName)">delete</mat-icon>
       </div>
+
     </div>
 
   </mat-card>
