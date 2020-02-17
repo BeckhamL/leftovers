@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { IngredientsService } from '../services/ingredients.service';
 @Component({
   selector: 'app-preferences',
   templateUrl: './preferences.component.html',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PreferencesComponent implements OnInit {
 
-  constructor() { }
+  ingredientList: string[];
+  constructor(
+    private ingredientService: IngredientsService
+  ) { }
 
   ngOnInit() {
+    this.ingredientService.ingredients$.subscribe(data => {
+      console.log(data);
+      this.ingredientList = data;
+    })
   }
 
 }

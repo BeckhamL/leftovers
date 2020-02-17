@@ -2,4 +2,14 @@
   <div class="title_font">Choose any preferences you may have</div>
   <div class="content_font">*Optional - if no preferences are chosen we'll find recipes based on your ingredients</div>
 </div>
+
+<div class="_flex _space_evenly">
+    <site-common-ingredient-list-view [title]="'Vegetables'" [ingredientList]="ingredientList"></site-common-ingredient-list-view>
+    <site-common-ingredient-list-view [title]="'Meat'"></site-common-ingredient-list-view>
+    <site-common-ingredient-list-view [title]="'Fish'"></site-common-ingredient-list-view>
+    <site-common-ingredient-list-view [title]="'Carbohydrates'"></site-common-ingredient-list-view>
+    <site-common-ingredient-list-view [title]="'Seasoning'"></site-common-ingredient-list-view>
+    <site-common-ingredient-list-view [title]="'Other'"></site-common-ingredient-list-view>
+</div>
+
 <site-common-footer></site-common-footer>

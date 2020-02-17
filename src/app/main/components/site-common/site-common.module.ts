@@ -8,12 +8,14 @@ import { MatIconModule } from "@angular/material/icon";
 import { EditModalComponent } from "./edit-modal/edit-modal.component";
 import { ConfirmationModalComponent } from "./confirmation-modal/confirmation-modal.component";
 import { RouterModule } from '@angular/router';
+import { IngredientListViewComponent } from './ingredient-list-view/ingredient-list-view.component';
 @NgModule({
   declarations: [
     FooterComponent,
     ButtonComponent,
     EditModalComponent,
-    ConfirmationModalComponent
+    ConfirmationModalComponent,
+    IngredientListViewComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,7 @@ import { RouterModule } from '@angular/router';
     MatIconModule,
     RouterModule
   ],
-  exports: [FooterComponent, ButtonComponent, MaterialCommonModule],
+  exports: [FooterComponent, ButtonComponent, MaterialCommonModule, IngredientListViewComponent],
   providers: [],
   entryComponents: [EditModalComponent, ConfirmationModalComponent]
 })
