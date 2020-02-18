@@ -1,5 +1,10 @@
+<mat-form-field>
+  <form [formGroup]="formGroup">
+    <input matInput formControlName="editedItem">
+  </form>
+</mat-form-field>
 
 <div class="_flex _space_between" fxFlex="20%">
-    <site-common-cancel-check-button [config]="{cancel: true}"></site-common-cancel-check-button>
-    <site-common-cancel-check-button [config]="{check: true}"></site-common-cancel-check-button>
+  <site-common-cancel-check-button [config]="{cancel: true}" (cancel)="onCloseClick()"></site-common-cancel-check-button>
+  <site-common-cancel-check-button [config]="{check: true}" (check)="onSubmit()"></site-common-cancel-check-button>
 </div>

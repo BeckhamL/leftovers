@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { EditModalComponent } from '../../site-common/edit-modal/edit-modal.component';
 import { ConfirmationModalComponent } from '../../site-common/confirmation-modal/confirmation-modal.component';
@@ -7,7 +7,7 @@ import { ConfirmationModalComponent } from '../../site-common/confirmation-modal
   templateUrl: './list-item.component.html',
   styleUrls: ['./list-item.component.scss']
 })
-export class ListItemComponent implements OnInit {
+export class ListItemComponent implements OnInit, OnChanges {
 
   @Input()
   itemName: string;
@@ -22,6 +22,10 @@ export class ListItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngOnChanges() {
+
+  }
+
   deleteSelectedItem(itemSelected: string): void {
 
     const dialogRef = this.dialog.open(ConfirmationModalComponent, {
@@ -34,7 +38,8 @@ export class ListItemComponent implements OnInit {
   editSelectedItem(itemSelected: string): void {
 
     const dialogRef = this.dialog.open(EditModalComponent, {
-      width: '500px'
+      width: '500px',
+      data: {itemValue: itemSelected}
     });
   }
 

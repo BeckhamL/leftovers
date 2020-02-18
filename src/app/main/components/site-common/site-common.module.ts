@@ -12,7 +12,10 @@ import { IngredientListViewComponent } from "./ingredient-list-view/ingredient-l
 import { MatDividerModule } from "@angular/material/divider";
 import { MatListModule } from "@angular/material/list";
 import { FloatingNavButtonComponent } from "./floating-nav-button/floating-nav-button.component";
-import { CancelCheckButtonComponent } from './cancel-check-button/cancel-check-button.component';
+import { CancelCheckButtonComponent } from "./cancel-check-button/cancel-check-button.component";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { ReactiveFormsModule } from "@angular/forms";
+import { MatInputModule } from "@angular/material/input";
 @NgModule({
   declarations: [
     FooterComponent,
@@ -30,7 +33,10 @@ import { CancelCheckButtonComponent } from './cancel-check-button/cancel-check-b
     MatIconModule,
     RouterModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatInputModule
   ],
   exports: [
     FooterComponent,
