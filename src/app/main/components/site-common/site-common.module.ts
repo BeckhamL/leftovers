@@ -12,7 +12,7 @@ import { IngredientListViewComponent } from "./ingredient-list-view/ingredient-l
 import { MatDividerModule } from "@angular/material/divider";
 import { MatListModule } from "@angular/material/list";
 import { FloatingNavButtonComponent } from "./floating-nav-button/floating-nav-button.component";
-
+import { CancelCheckButtonComponent } from './cancel-check-button/cancel-check-button.component';
 @NgModule({
   declarations: [
     FooterComponent,
@@ -20,7 +20,8 @@ import { FloatingNavButtonComponent } from "./floating-nav-button/floating-nav-b
     EditModalComponent,
     ConfirmationModalComponent,
     IngredientListViewComponent,
-    FloatingNavButtonComponent
+    FloatingNavButtonComponent,
+    CancelCheckButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +37,8 @@ import { FloatingNavButtonComponent } from "./floating-nav-button/floating-nav-b
     ButtonComponent,
     MaterialCommonModule,
     IngredientListViewComponent,
-    FloatingNavButtonComponent
+    FloatingNavButtonComponent,
+    CancelCheckButtonComponent
   ],
   providers: [],
   entryComponents: [EditModalComponent, ConfirmationModalComponent]

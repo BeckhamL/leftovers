@@ -1,0 +1,39 @@
+@import '../../../../../assets/global.scss';
+
+.cancel {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  margin-right: 15px;
+  background: transparent;
+}
+
+.cancel:hover {
+  cursor: pointer;
+  background: #FEF4F5;
+}
+
+.check {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.check:hover {
+  cursor: pointer;
+  background: #F5FFE1;
+}
+
+.check_color {
+  color: #78B83E;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.cancel_color {
+  color: #E52F48;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+

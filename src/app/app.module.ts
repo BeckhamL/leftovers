@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,10 +18,12 @@ import { ReactiveFormsModule} from '@angular/forms';
     MainModule,
     BrowserAnimationsModule,
     MaterialCommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FlexLayoutModule
   ],
   exports: [
-    MaterialCommonModule
+    MaterialCommonModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
