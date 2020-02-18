@@ -5,9 +5,18 @@
     <path fill="#FAF8F8" fill-opacity="1" d="M0,160L40,144C80,128,160,96,240,112C320,128,400,192,480,213.3C560,235,640,213,720,170.7C800,128,880,64,960,53.3C1040,43,1120,85,1200,117.3C1280,149,1360,171,1400,181.3L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
   </svg>
 </div>
+<div class="_flex_row_end">
+  <div *ngIf="ingredientsList?.length > 0; else noIngredients">
+      <site-common-floating-nav-button [config]="{icon: 'arrow_forward', style: 'active', position: 'right'}"></site-common-floating-nav-button>
+  </div>
+  <ng-template #noIngredients>
+      <site-common-floating-nav-button [config]="{icon: 'arrow_forward', style: 'disabled', position: 'right'}"></site-common-floating-nav-button>
+  </ng-template>
+  
+</div>
 <div class="_flex _justify_center">
   <div class="tab_wrapper">
     <dashboard-common-tab-group></dashboard-common-tab-group>
   </div>
 </div>
-<site-common-footer></site-common-footer>
+<!-- <site-common-footer></site-common-footer> -->

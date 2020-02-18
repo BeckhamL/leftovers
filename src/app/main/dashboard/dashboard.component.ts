@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IngredientsService } from '../services/ingredients.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  ingredientsList: string[];
+
+  constructor(
+    private ingredientService: IngredientsService
+  ) { }
 
   ngOnInit() {
+    this.ingredientService.ingredients$.subscribe(data => {
+      this.ingredientsList = data;
+    });
   }
 
 }
