@@ -8,11 +8,11 @@ import { InputListComponent } from "./input-list/input-list.component";
 import { MatListModule } from "@angular/material/list";
 import { MatInputModule } from "@angular/material/input";
 import { ReactiveFormsModule } from "@angular/forms";
-import { ListItemComponent } from './list-item/list-item.component';
-import {MatCardModule} from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon';
-import { SiteCommonModule } from '../site-common/site-common.module';
-import {MatDialogModule} from '@angular/material/dialog';
+import { ListItemComponent } from "./list-item/list-item.component";
+import { MatCardModule } from "@angular/material/card";
+import { MatIconModule } from "@angular/material/icon";
+import { SiteCommonModule } from "../site-common/site-common.module";
+import { MatDialogModule } from "@angular/material/dialog";
 @NgModule({
   declarations: [TabGroupComponent, InputListComponent, ListItemComponent],
   imports: [
@@ -28,7 +28,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     SiteCommonModule,
     MatDialogModule
   ],
-  exports: [MaterialCommonModule, TabGroupComponent, InputListComponent],
+  exports: [TabGroupComponent, InputListComponent],
   providers: []
 })
 export class DashboardCommonModule {}

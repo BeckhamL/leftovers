@@ -21,4 +21,9 @@ export class IngredientsService {
   getAllIngredients(): string[] {
       return this.ingredientList;
   }
+
+  editIngredientList(ingredient: string): void {
+
+    console.log(this.ingredientList);
+  }
 }

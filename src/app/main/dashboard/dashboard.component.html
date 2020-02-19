@@ -7,7 +7,7 @@
 </div>
 <div class="_flex_row_end">
   <div *ngIf="ingredientsList?.length > 0; else noIngredients">
-      <site-common-floating-nav-button [config]="{icon: 'arrow_forward', style: 'active', position: 'right'}"></site-common-floating-nav-button>
+      <site-common-floating-nav-button [config]="{icon: 'arrow_forward', style: 'active', position: 'right'}" (click)="onClickPreferences()"></site-common-floating-nav-button>
   </div>
   <ng-template #noIngredients>
       <site-common-floating-nav-button [config]="{icon: 'arrow_forward', style: 'disabled', position: 'right'}"></site-common-floating-nav-button>

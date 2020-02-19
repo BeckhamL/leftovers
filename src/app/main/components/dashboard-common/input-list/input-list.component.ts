@@ -15,6 +15,8 @@ export class InputListComponent implements OnInit {
 
   constructor(private ingredientService: IngredientsService) {
     this.ingredientService.ingredients$.subscribe(data => {
+      console.log(data);
+      console.log(this.vegetableValues);
       this.vegetableValues = data;
     });
   }
