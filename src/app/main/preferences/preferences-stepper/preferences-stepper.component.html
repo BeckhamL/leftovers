@@ -1,14 +1,12 @@
-<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
-  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
-</button>
-<mat-horizontal-stepper [linear]="isLinear" #stepper>
+
+<mat-horizontal-stepper #stepper>
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>Fill out your name</ng-template>
-      <mat-form-field>
-        <mat-label>Name</mat-label>
-        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-      </mat-form-field>
+      <ng-template matStepLabel>Cuisine</ng-template>
+      <div *ngFor="let cuisine of cuisines">
+        <mat-checkbox>{{cuisine.value}}</mat-checkbox>
+      </div>
+
       <div>
         <button mat-button matStepperNext>Next</button>
       </div>
