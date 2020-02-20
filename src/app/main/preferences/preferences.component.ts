@@ -20,7 +20,7 @@ export class PreferencesComponent implements OnInit {
   }
 
   onClickFindRecipes() {
-    this.router.navigate([]);
+    this.router.navigate(['/recipes']);
   }
 
 }
