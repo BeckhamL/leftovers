@@ -15,6 +15,13 @@
     <site-common-ingredient-list-view [title]="'Other'"></site-common-ingredient-list-view>
 </div>
 
-<preferences-stepper></preferences-stepper>
+<div class="_flex_row_end">
+      <site-common-floating-nav-button [config]="{icon: 'arrow_forward', style: 'active', position: 'right'}" (click)="onClickFindRecipes()"></site-common-floating-nav-button>
+
+</div>
+
+<div class="_flex _justify_center">
+  <preferences-stepper></preferences-stepper>
+</div>
 
 <!-- <site-common-footer></site-common-footer> -->

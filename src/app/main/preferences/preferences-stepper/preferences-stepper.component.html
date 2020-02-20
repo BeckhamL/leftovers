@@ -6,7 +6,6 @@
       <div *ngFor="let cuisine of cuisines">
         <mat-checkbox>{{cuisine.value}}</mat-checkbox>
       </div>
-
       <div>
         <button mat-button matStepperNext>Next</button>
       </div>
@@ -14,12 +13,34 @@
   </mat-step>
   <mat-step [stepControl]="secondFormGroup">
     <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Fill out your address</ng-template>
-      <mat-form-field>
-        <mat-label>Address</mat-label>
-        <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-               required>
-      </mat-form-field>
+      <ng-template matStepLabel>Time for preparation</ng-template>
+      <div *ngFor="let time of preparationTime">
+        <mat-checkbox>{{time.value}}</mat-checkbox>
+      </div>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup">
+      <ng-template matStepLabel>Serving size</ng-template>
+      <div *ngFor="let size of servingSize">
+        <mat-checkbox>{{size.value}}</mat-checkbox>
+      </div>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="fourthFormGroup">
+    <form [formGroup]="fourthFormGroup">
+      <ng-template matStepLabel>Food allergies</ng-template>
+      <div *ngFor="let cuisine of cuisines">
+        <mat-checkbox>{{cuisine.value}}</mat-checkbox>
+      </div>
       <div>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>
