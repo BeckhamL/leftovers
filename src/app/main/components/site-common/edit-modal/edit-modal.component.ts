@@ -31,8 +31,9 @@ export class EditModalComponent implements OnInit {
   }
 
   onSubmit() {
-    this.ingredientService.editIngredientList(this.formGroup.value.editedItem);
-    this.ingredientService.setIngredients(this.formGroup.value.editedItem);
+    const index = this.ingredientService.selectedIngredient(this.formGroup.value.editedItem);
+    console.log(index);
+    this.ingredientService.editIngredient(this.formGroup.value.editedItem, index);
     this.dialogRef.close();
   }
 

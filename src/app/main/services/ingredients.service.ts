@@ -22,8 +22,14 @@ export class IngredientsService {
       return this.ingredientList;
   }
 
-  editIngredientList(ingredient: string): void {
+  selectedIngredient(ingredient: string): number {
 
-    console.log(this.ingredientList);
+    let index = this.ingredientList.findIndex(x => x === ingredient);
+    return index;
+  }
+
+  editIngredient(ingredient: string, index: number): string {
+    this.ingredientList[index] = ingredient;
+    return ingredient;
   }
 }

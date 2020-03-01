@@ -10,6 +10,9 @@ export class FloatingNavButtonComponent implements OnInit {
 
   @Input()
   config: FloatingNavButtonModel;
+
+  @Input()
+  title: string;
   constructor() { }
 
   ngOnInit() {

@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angu
 import { MatDialog } from '@angular/material/dialog';
 import { EditModalComponent } from '../../site-common/edit-modal/edit-modal.component';
 import { ConfirmationModalComponent } from '../../site-common/confirmation-modal/confirmation-modal.component';
+import { IngredientsService } from '../../../services/ingredients.service';
 @Component({
   selector: 'dashboard-common-list-item',
   templateUrl: './list-item.component.html',
@@ -16,7 +17,8 @@ export class ListItemComponent implements OnInit, OnChanges {
   deleteItem = new EventEmitter<string>();
 
   constructor(
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private ingredientService: IngredientsService
   ) { }
 
   ngOnInit() {

@@ -10,7 +10,7 @@
       <site-common-floating-nav-button [config]="{icon: 'arrow_forward', style: 'active', position: 'right'}" (click)="onClickPreferences()"></site-common-floating-nav-button>
   </div>
   <ng-template #noIngredients>
-      <site-common-floating-nav-button [config]="{icon: 'arrow_forward', style: 'disabled', position: 'right'}"></site-common-floating-nav-button>
+      <site-common-floating-nav-button [config]="{icon: 'arrow_forward', style: 'disabled', position: 'right'}" [title]="'Please enter an ingredient'"></site-common-floating-nav-button>
   </ng-template>
   
 </div>
